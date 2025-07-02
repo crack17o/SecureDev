@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+import pngLogo from '/Logo.png';
 const Logo = ({ size = 'md', className = '' }) => {
   const sizeClasses = {
     sm: 'navbar-brand-sm',
@@ -9,8 +9,7 @@ const Logo = ({ size = 'md', className = '' }) => {
 
   return (
     <span className={`${sizeClasses[size]} ${className}`}>
-      <span className="text-primary-custom">Secure</span>
-      <span className="text-dark-custom">Dev</span>
+      <img src={pngLogo} alt="SecureDev Logo" width={150}/>
     </span>
   );
 };

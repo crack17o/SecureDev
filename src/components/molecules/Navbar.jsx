@@ -23,24 +23,42 @@ const Navbar = () => {
         </button>
         
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto navbar-nav-custom">
-            <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/') ? 'active' : ''}`} 
-                to="/"
-              >
-                Accueil
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/about') ? 'active' : ''}`} 
-                to="/about"
-              >
-                À propos
-              </Link>
-            </li>
-          </ul>
+    
+<ul className="navbar-nav ms-auto navbar-nav-custom">
+  <li className="nav-item">
+    <Link 
+      className={`nav-link ${isActive('/') ? 'active' : ''}`} 
+      to="/"
+    >
+      Accueil
+    </Link>
+  </li>
+  <li className="nav-item">
+    <Link 
+      className={`nav-link ${isActive('/about') ? 'active' : ''}`} 
+      to="/about"
+    >
+      À propos
+    </Link>
+  </li>
+ {/*  <li className="nav-item">
+    <Link 
+      className={`nav-link ${isActive('/projects') ? 'active' : ''}`} 
+      to="/projects"
+    >
+      Nos réalisations
+    </Link>
+  </li> */}
+  <li className="nav-item">
+    <Link 
+      className={`nav-link ${isActive('/contact') ? 'active' : ''}`} 
+      to="/contact"
+    >
+      Contact
+    </Link>
+  </li>
+</ul>
+
         </div>
       </div>
     </nav>

@@ -9,7 +9,7 @@ const About = () => {
       <section className="hero-section">
         <div className="container">
           <div className="row align-items-center min-vh-75">
-            <div className="col-lg-8 mx-auto text-center">
+            <div className="col-lg-8 mx-auto text-center about-hero ">
               <Typography variant="h1" className="hero-title">
                 À Propos de <span className="text-primary-custom">SecureDev</span>
               </Typography>
