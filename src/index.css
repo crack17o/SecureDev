@@ -4,8 +4,8 @@
 
 /* SecureDev Custom Variables */
 :root {
-  --primary-dark: #1F2A44;
-  --primary-blue: #3CA6E5;
+  --primary-dark: #1f2a44ce;
+  --primary-blue: #3ca7e5c4;
   --white: #FFFFFF;
   --dark-gray: #2C2C2C;
   --light-gray: #f8f9fa;
@@ -140,7 +140,8 @@ h1 {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%), 
+              url('../public/background.jpg') center/cover no-repeat;
   color: var(--white);
   position: relative;
   overflow: hidden;
