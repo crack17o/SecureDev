@@ -19,11 +19,12 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch('http://votre-domaine-symfony.com/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      const response = await fetch('https://votre-api.com/api/contact', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Origin': 'https://secure-dev.vercel.app'
+  },
         body: JSON.stringify(formData),
       });
 
