@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Logo from '../atoms/Logo';
 import Icon from '../atoms/Icon';
 
@@ -13,14 +14,14 @@ const Footer = () => {
               et la sécurité informatique. Nous transformons vos idées en solutions digitales robustes.
             </p>
             <div className="d-flex gap-3">
-              <a href="#" className="text-decoration-none">
+              <a href="https://linkedin.com/company/securedev" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
                 <Icon name="linkedin" size="1.5rem" />
               </a>
-              <a href="#" className="text-decoration-none">
-                <Icon name="twitter" size="1.5rem" />
-              </a>
-              <a href="#" className="text-decoration-none">
+              <a href="https://github.com/SecureDev-RDC" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
                 <Icon name="github" size="1.5rem" />
+              </a>
+              <a href="mailto:contact@securedev.cd" className="text-decoration-none">
+                <Icon name="envelope" size="1.5rem" />
               </a>
             </div>
           </div>
@@ -28,20 +29,22 @@ const Footer = () => {
           <div className="col-lg-2 col-md-6 mb-4">
             <h5>Navigation</h5>
             <ul className="list-unstyled">
-              <li><a href="/">Accueil</a></li>
-              <li><a href="/about">À propos</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><Link to="/">Accueil</Link></li>
+              <li><Link to="/about">À propos</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/pricing">Tarifs</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
           
           <div className="col-lg-3 col-md-6 mb-4">
             <h5>Services</h5>
             <ul className="list-unstyled">
-              <li><a href="#">Développement Web</a></li>
-              <li><a href="#">Applications Mobile</a></li>
-              <li><a href="#">Sécurité Informatique</a></li>
-              <li><a href="#">Solutions Cloud</a></li>
+              <li><Link to="/services/developpement-web">Développement Web</Link></li>
+              <li><Link to="/services/applications-mobile">Applications Mobile</Link></li>
+              <li><Link to="/services/securite-informatique">Sécurité Informatique</Link></li>
+              <li><Link to="/services/solutions-cloud">Solutions Cloud</Link></li>
+              <li><Link to="/services/consulting-it">Consulting IT</Link></li>
             </ul>
           </div>
           
@@ -53,11 +56,15 @@ const Footer = () => {
             </div>
             <div className="d-flex align-items-center mb-2">
               <Icon name="envelope" className="me-2" />
-              <span>contact@securedev.cd</span>
+              <a href="mailto:contact@securedev.cd" className="text-decoration-none">
+                contact@securedev.cd
+              </a>
             </div>
-            <div className="d-flex align-items-center">
-              <Icon name="phone" className="me-2" />
-              <span>+243 XXX XXX XXX</span>
+            <div className="d-flex align-items-center mb-2">
+              <Icon name="whatsapp" className="me-2" />
+              <a href="https://wa.me/243828026729" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                +243 828 026 729
+              </a>
             </div>
           </div>
         </div>

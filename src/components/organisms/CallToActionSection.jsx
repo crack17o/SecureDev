@@ -15,11 +15,11 @@ const CallToActionSection = () => {
               SecureDev peut transformer vos idées en solutions digitales performantes.
             </Typography>
             <div className="d-flex gap-3 justify-content-center flex-wrap">
-              <Button variant="primary" size="lg">
-                Demander un devis
+              <Button variant="primary" size="lg" to="/pricing">
+                Voir la grille tarifaire
               </Button>
-              <Button variant="outline" size="lg">
-                Planifier un appel
+              <Button variant="outline" size="lg" to="/contact">
+                Nous contacter
               </Button>
             </div>
           </div>

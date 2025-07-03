@@ -17,10 +17,10 @@ const HeroSection = () => {
               Nous combinons expertise technique et innovation pour propulser votre entreprise vers le futur digital.
             </Typography>
             <div className="d-flex gap-3 justify-content-center flex-wrap">
-              <Button variant="primary" size="lg">
+              <Button variant="primary" size="lg" to="/services">
                 Découvrir nos services
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" to="/contact">
                 Nous contacter
               </Button>
             </div>

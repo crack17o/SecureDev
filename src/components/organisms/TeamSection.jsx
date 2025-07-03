@@ -7,31 +7,46 @@ const TeamSection = () => {
       name: 'Jelly Maweja',
       role: 'Ingénieur Logiciel',
       initials: 'JM',
-      description: 'Spécialiste en développement full-stack, base de données et architecture logicielle.'
+      description: 'Spécialiste en développement full-stack, base de données et architecture logicielle.',
+      email: 'jellymaweja7@gmail.com',
+      phone: '+243 828 026 729',
+      github: 'https://github.com/JellyMnavita'
     },
     {
       name: 'Joël Stone Lumpungu',
       role: 'Ingénieur Logiciel',
       initials: 'JSL',
-      description: 'Spécialiste en développement Backend et en Base de Données.'
+      description: 'Spécialiste en développement Backend et en Base de Données.',
+      email: 'joelstonelumpungu09@gmail.com',
+      phone: '+243 899 967 287',
+      github: 'https://github.com/crack17o'
     },
     {
       name: 'José Hemedi',
       role: 'Ingénieur Logiciel',
       initials: 'JH',
-      description: 'Développeur senior spécialisé en...'
+      description: 'Spécialiste en développement Frontend et en intégration d\'API.',
+      email: 'emedisiku@gmail.com',
+      phone: '+243 850 377 919',
+      github: 'https://github.com/josehemedi'
     },
     {
       name: 'Léa Botoko',
       role: 'Experte en Sécurité',
       initials: 'LB',
-      description: 'Spécialiste en cybersécurité et audit de sécurité.'
+      description: 'Spécialiste en cybersécurité et audit de sécurité.',
+      email: 'leahopebotoko@gmail.com',
+      phone: '+243 832 568 228',
+      github: null
     },
     {
       name: 'Sidonie Tshiambila',
       role: 'Experte en Sécurité',
       initials: 'ST',
-      description: 'Consultante en sécurité informatique et gestion des risques.'
+      description: 'Consultante en sécurité informatique et gestion des risques.',
+      email: null,
+      phone: '+243 973 447 868',
+      github: null
     }
   ];
 
@@ -49,6 +64,9 @@ const TeamSection = () => {
               role={member.role}
               initials={member.initials}
               description={member.description}
+              email={member.email}
+              phone={member.phone}
+              github={member.github}
             />
           ))}
         </div>
