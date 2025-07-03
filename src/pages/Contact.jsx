@@ -4,10 +4,40 @@ import Button from '../components/atoms/Button';
 import Icon from '../components/atoms/Icon';
 
 const Contact = () => {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Logique de soumission du formulaire
-    alert('Message envoyé avec succès ! Nous vous répondrons bientôt.');
+    
+    const formData = {
+      firstName: e.target.firstName.value,
+      lastName: e.target.lastName.value,
+      email: e.target.email.value,
+      phone: e.target.phone.value,
+      subject: e.target.subject.value,
+      budget: e.target.budget.value,
+      timeline: e.target.timeline.value,
+      message: e.target.message.value
+    };
+
+    try {
+      const response = await fetch('http://votre-domaine-symfony.com/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message);
+        e.target.reset();
+      } else {
+        alert('Erreur: ' + (data.message || 'Une erreur est survenue'));
+      }
+    } catch (error) {
+      alert('Erreur réseau: ' + error.message);
+    }
   };
 
   return (
