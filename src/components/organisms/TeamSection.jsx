@@ -44,7 +44,7 @@ const TeamSection = () => {
       role: 'Experte en Sécurité',
       initials: 'ST',
       description: 'Consultante en sécurité informatique et gestion des risques.',
-      email: null,
+      email: 'tshiambilamulanga@gmail.com',
       phone: '+243 973 447 868',
       github: null
     }
