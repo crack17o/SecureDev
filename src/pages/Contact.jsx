@@ -19,7 +19,7 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch('https://votre-api.com/api/contact', {
+      const response = await fetch(' https://securedev-backend.onrender.com/api/contact/', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
