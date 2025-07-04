@@ -9,14 +9,14 @@ import Swal from 'sweetalert2';
 const FullPageLoader = () => (
   <div style={{
     position: 'fixed',
-    zIndex: 2000,
+    zIndex: 2001,
     top: 0, left: 0, right: 0, bottom: 0,
     background: 'rgba(255,255,255,0.7)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
   }}>
-    <div>
+    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
       <span className="spinner-border text-primary" style={{width: '4rem', height: '4rem'}} role="status" />
       <div className="mt-3 text-primary fw-bold fs-5">Envoi en cours...</div>
     </div>
