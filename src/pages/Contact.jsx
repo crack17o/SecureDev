@@ -28,7 +28,8 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       });
-
+console.log("Machine: ", formData);
+      console.log("Response: ", response);
       const data = await response.json();
 
       if (response.ok) {
