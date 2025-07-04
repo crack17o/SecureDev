@@ -1,12 +1,34 @@
+import React, { useState } from 'react';
 import Layout from '../components/templates/Layout';
 import Typography from '../components/atoms/Typography';
 import Button from '../components/atoms/Button';
 import Icon from '../components/atoms/Icon';
 import Swal from 'sweetalert2';
 
+// Loader pleine page
+const FullPageLoader = () => (
+  <div style={{
+    position: 'fixed',
+    zIndex: 2000,
+    top: 0, left: 0, right: 0, bottom: 0,
+    background: 'rgba(255,255,255,0.7)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }}>
+    <div>
+      <span className="spinner-border text-primary" style={{width: '4rem', height: '4rem'}} role="status" />
+      <div className="mt-3 text-primary fw-bold fs-5">Envoi en cours...</div>
+    </div>
+  </div>
+);
+
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const formData = {
       firstName: e.target.firstName.value,
@@ -27,9 +49,8 @@ const Contact = () => {
           'Origin': 'https://secure-dev.vercel.app'
         },
         body: JSON.stringify(formData),
+
       });
-console.log("Machine: ", formData);
-      console.log("Response: ", response);
       const data = await response.json();
 
       if (response.ok) {
@@ -55,11 +76,14 @@ console.log("Machine: ", formData);
         text: error.message,
         confirmButtonColor: '#3ca7e5'
       });
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <Layout>
+      {loading && <FullPageLoader />}
       {/* Hero Section */}
       <section className="hero-section">
         <div className="container">
@@ -189,9 +213,18 @@ console.log("Machine: ", formData);
                       required 
                     />
                   </div>
-                  <Button variant="primary" size="lg" className="w-100">
-                    <Icon name="send" className="me-2" />
-                    Envoyer le message
+                  <Button variant="primary" size="lg" className="w-100" disabled={loading}>
+                    {loading ? (
+                      <>
+                        <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        Envoi en cours...
+                      </>
+                    ) : (
+                      <>
+                        <Icon name="send" className="me-2" />
+                        Envoyer le message
+                      </>
+                    )}
                   </Button>
                 </form>
               </div>
