@@ -2,11 +2,12 @@ import Layout from '../components/templates/Layout';
 import Typography from '../components/atoms/Typography';
 import Button from '../components/atoms/Button';
 import Icon from '../components/atoms/Icon';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     const formData = {
       firstName: e.target.firstName.value,
       lastName: e.target.lastName.value,
@@ -20,24 +21,39 @@ const Contact = () => {
 
     try {
       const response = await fetch(' https://securedev-backend.onrender.com/api/contact/', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Origin': 'https://secure-dev.vercel.app'
-  },
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Origin': 'https://secure-dev.vercel.app'
+        },
         body: JSON.stringify(formData),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        alert(data.message);
+        Swal.fire({
+          icon: 'success',
+          title: 'Message envoyé !',
+          text: data.message || 'Votre message a bien été envoyé. Nous vous répondrons rapidement.',
+          confirmButtonColor: '#3ca7e5'
+        });
         e.target.reset();
       } else {
-        alert('Erreur: ' + (data.message || 'Une erreur est survenue'));
+        Swal.fire({
+          icon: 'error',
+          title: 'Erreur',
+          text: data.message || 'Une erreur est survenue lors de l\'envoi.',
+          confirmButtonColor: '#3ca7e5'
+        });
       }
     } catch (error) {
-      alert('Erreur réseau: ' + error.message);
+      Swal.fire({
+        icon: 'error',
+        title: 'Erreur réseau',
+        text: error.message,
+        confirmButtonColor: '#3ca7e5'
+      });
     }
   };
 
