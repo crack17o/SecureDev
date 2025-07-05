@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import pngLogo from '/Logo.png';
+import pngLogo from '/LogoBlack.png';
 const Logo = ({ size = 'md', className = '' }) => {
   const sizeClasses = {
     sm: 'navbar-brand-sm',

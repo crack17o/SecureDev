@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Logo from '../atoms/LogoBlack';
+import Logo from '../atoms/Logo';
 import Icon from '../atoms/Icon';
 
 const Footer = () => {
