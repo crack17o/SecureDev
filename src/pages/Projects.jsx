@@ -1,6 +1,6 @@
 import Layout from '../components/templates/Layout';
 import Typography from '../components/atoms/Typography';
-
+import { Helmet } from "react-helmet";
 const projects = [
   {
     title: "Plateforme E-commerce sécurisée",
@@ -24,6 +24,11 @@ const projects = [
 
 const Projects = () => (
   <Layout>
+    <Helmet>
+  <title>Nos réalisations | Projets réalisés</title>
+  <meta name="description" content="Soumettez votre besoin en sécurité informatique ou développement logiciel. Recevez une estimation personnalisée." />
+</Helmet>
+
     <section className="section" style={{ background: "var(--light-gray)" }}>
       <div className="" >
         <section className='hero-section' style={{padding:"100px"}}> 

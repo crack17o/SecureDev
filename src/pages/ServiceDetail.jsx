@@ -3,7 +3,7 @@ import Layout from '../components/templates/Layout';
 import Typography from '../components/atoms/Typography';
 import Button from '../components/atoms/Button';
 import Icon from '../components/atoms/Icon';
-
+import { Helmet } from "react-helmet";
 const ServiceDetail = () => {
   const { slug } = useParams();
 
@@ -354,6 +354,10 @@ const ServiceDetail = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Nos services | Audit, développement, cybersécurité</title>
+  <meta name="description" content="Découvrez nos services : audit de sécurité, développement d'applications, pentesting, cloud sécurisé." />
+</Helmet>
       {/* Hero Section */}
       <section className="service-detail-hero">
         <div className="container">

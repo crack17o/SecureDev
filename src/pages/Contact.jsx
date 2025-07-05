@@ -4,7 +4,7 @@ import Typography from '../components/atoms/Typography';
 import Button from '../components/atoms/Button';
 import Icon from '../components/atoms/Icon';
 import Swal from 'sweetalert2';
-
+import { Helmet } from "react-helmet";
 // Loader pleine page
 const FullPageLoader = () => (
   <div style={{
@@ -83,6 +83,11 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Contactez SecureDev | Devis projet cybersécurité</title>
+  <meta name="description" content="Soumettez votre besoin en sécurité informatique ou développement logiciel. Recevez une estimation personnalisée." />
+</Helmet>
+
       {loading && <FullPageLoader />}
       {/* Hero Section */}
       <section className="hero-section">

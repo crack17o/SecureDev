@@ -1,7 +1,7 @@
 import Layout from '../components/templates/Layout';
 import Typography from '../components/atoms/Typography';
 import ServiceCard from '../components/molecules/ServiceCard';
-
+import { Helmet } from "react-helmet";
 const Services = () => {
   const services = [
     {
@@ -44,6 +44,10 @@ const Services = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Nos services | Audit, développement, cybersécurité</title>
+        <meta name="description" content="Découvrez nos services : audit de sécurité, développement d'applications, pentesting, cloud sécurisé." />
+      </Helmet>
       {/* Hero Section */}
       <section className="hero-section">
         <div className="container">
@@ -53,7 +57,7 @@ const Services = () => {
                 Nos <span className="text-primary-custom">Services</span>
               </Typography>
               <Typography variant="p" className="hero-subtitle lead mb-5">
-                Découvrez notre gamme complète de services en développement et sécurité informatique. 
+                Découvrez notre gamme complète de services en développement et sécurité informatique.
                 Des solutions sur mesure pour accompagner votre transformation digitale.
               </Typography>
             </div>

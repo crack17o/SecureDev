@@ -2,7 +2,7 @@ import Layout from '../components/templates/Layout';
 import Typography from '../components/atoms/Typography';
 import Button from '../components/atoms/Button';
 import Icon from '../components/atoms/Icon';
-
+import { Helmet } from "react-helmet";
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,6 +12,11 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Contactez SecureDev | Devis projet cybersécurité</title>
+  <meta name="description" content="Soumettez votre besoin en sécurité informatique ou développement logiciel. Recevez une estimation personnalisée." />
+</Helmet>
+
       {/* Hero Section */}
       <section className="hero-section">
         <div className="container">

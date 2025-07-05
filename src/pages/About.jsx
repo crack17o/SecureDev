@@ -1,10 +1,14 @@
 import Layout from '../components/templates/Layout';
 import TeamSection from '../components/organisms/TeamSection';
 import Typography from '../components/atoms/Typography';
-
+import { Helmet } from "react-helmet";
 const About = () => {
   return (
     <Layout>
+      <Helmet>
+  <title>A propos | Experts en cybersécurité et développement logiciel</title>
+  <meta name="description" content="Startup experte en cybersécurité, développement web et cloud. Sécurisez votre entreprise avec SecureDev." />
+</Helmet>
       {/* Hero Section */}
       <section className="hero-section">
         <div className="container">

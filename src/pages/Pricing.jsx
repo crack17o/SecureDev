@@ -4,7 +4,7 @@ import Typography from '../components/atoms/Typography';
 import Button from '../components/atoms/Button';
 import Icon from '../components/atoms/Icon';
 import Toggle from '../components/molecules/Toggle';
-
+import { Helmet } from "react-helmet";
 const Pricing = () => {
   const [activeCategory, setActiveCategory] = useState('development');
   // Données organisées par catégorie
@@ -182,6 +182,11 @@ const Pricing = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Nos Tarifs | Nos differentes tarifications</title>
+  <meta name="description" content="Soumettez votre besoin en sécurité informatique ou développement logiciel. Recevez une estimation personnalisée." />
+</Helmet>
+
       {/* Hero Section */}
       <section className="hero-section">
         <div className="container">
