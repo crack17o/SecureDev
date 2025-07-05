@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-4 mb-4">
-            <Logo size="lg" className="mb-3" />
+            <Logo size="lg" className="mb-3" partie="footer" />
             <p className="mb-3">
               SecureDev est votre partenaire de confiance pour le développement 
               et la sécurité informatique. Nous transformons vos idées en solutions digitales robustes.
@@ -36,7 +36,6 @@ const Footer = () => {
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
-          
           <div className="col-lg-3 col-md-6 mb-4">
             <h5>Services</h5>
             <ul className="list-unstyled">

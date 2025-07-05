@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import pngLogo from '/LogoBlack.png';
-const Logo = ({ size = 'md', className = '' }) => {
+import pngLogoBlack from '/LogoBlack.png';
+import pngLogo from '/Logo.png';
+const Logo = ({ size = 'md', className = '', partie = 'header' }) => {
   const sizeClasses = {
     sm: 'navbar-brand-sm',
     md: 'navbar-brand-custom',
