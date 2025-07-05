@@ -10,7 +10,7 @@ const Logo = ({ size = 'md', className = '', partie = 'header' }) => {
 
   return (
     <span className={`${sizeClasses[size]} ${className}`}>
-      <img src={pngLogo} alt="SecureDev Logo" width={150}/>
+      <img src={partie=='header' ?pngLogo:pngLogoBlack} alt="SecureDev Logo" width={150}/>
     </span>
   );
 };
