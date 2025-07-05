@@ -4,5 +4,12 @@
   "routes": [
     { "handle": "filesystem" },        
     { "src": "/.*", "dest": "/index.html" }  
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://secure-dev.vercel.app/$1",
+      "permanent": true
+    }
   ]
 }
