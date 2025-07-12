@@ -61,8 +61,8 @@ const Footer = () => {
             </div>
             <div className="d-flex align-items-center mb-2">
               <Icon name="whatsapp" className="me-2" />
-              <a href="https://wa.me/243828026729" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
-                +243 828 026 729
+              <a href="https://wa.me/243991293713" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                +243 991 293 713
               </a>
             </div>
           </div>

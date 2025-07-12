@@ -144,8 +144,8 @@ const Contact = () => {
                     </div>
                     <div className="ms-3">
                       <h6 className="mb-1">Email</h6>
-                      <a href="mailto:contact@securedev.com" className="text-primary-custom text-decoration-none">
-                        contact@securedev.com
+                      <a href="mailto:securedevsolutions280@gmail.com" className="text-primary-custom text-decoration-none">
+                        securedevsolutions280@gmail.com
                       </a>
                     </div>
                   </div>
@@ -156,8 +156,8 @@ const Contact = () => {
                     </div>
                     <div className="ms-3">
                       <h6 className="mb-1">Téléphone</h6>
-                      <a href="tel:+243000000000" className="text-primary-custom text-decoration-none">
-                        +243 000 000 000
+                      <a href="tel:+243991293713" className="text-primary-custom text-decoration-none">
+                        +243 991 293 713
                       </a>
                     </div>
                   </div>
