@@ -20,7 +20,7 @@ const Footer = () => {
               <a href="https://github.com/SecureDev-RDC" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
                 <Icon name="github" size="1.5rem" />
               </a>
-              <a href="mailto:contact@securedev.cd" className="text-decoration-none">
+              <a href="mailto:securedevsolutions280@gmail.com" className="text-decoration-none">
                 <Icon name="envelope" size="1.5rem" />
               </a>
             </div>
@@ -55,8 +55,8 @@ const Footer = () => {
             </div>
             <div className="d-flex align-items-center mb-2">
               <Icon name="envelope" className="me-2" />
-              <a href="mailto:contact@securedev.cd" className="text-decoration-none">
-                contact@securedev.cd
+              <a href="mailto:securedevsolutions280@gmail.com" className="text-decoration-none">
+                securedevsolutions280@gmail.com
               </a>
             </div>
             <div className="d-flex align-items-center mb-2">
