@@ -47,6 +47,33 @@ const TeamSection = () => {
       email: 'tshiambilamulanga@gmail.com',
       phone: '+243 973 447 868',
       github: null
+    },
+    {
+      name: 'El-Rohi Mukendi',
+      role: 'Expert en Sécurité',
+      initials: 'EM',
+      description: 'Consultant en sécurité informatique et audit des risques.',
+      email: 'juanitoelroy14@gmail.com',
+      phone: '+243 859 889 302',
+      github: 'https://github.com/14juanito'
+    },
+    {
+      name: 'Elie Ntwari',
+      role: 'Data Scientist',
+      initials: 'EN',
+      description: 'Expert en science des données et apprentissage automatique.',
+      email: 'elientwari@gmail.com',
+      phone: '+243 857 034 316',
+      github: 'https://github.com/Elie-Ntwari'
+    },
+    {
+      name: 'Daniel Lukali',
+      role: 'Data Scientist',
+      initials: 'DL',
+      description: 'Expert en visualisation de données.',
+      email: 'danielukali@gmail.com',
+      phone: '+243 998 555 066',
+      github: null
     }
   ];
 
